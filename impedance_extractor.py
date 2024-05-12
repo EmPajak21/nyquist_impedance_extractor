@@ -92,8 +92,9 @@ def get_result_graph(result, x_data, y_data):
     ax.add_patch(circle)
 
     # Set labels and axis limits
-    ax.set_xlabel(r"$x$")
-    ax.set_ylabel(r"$y$")
+    ax.text(x_data.iloc[-1]/2, y_data.iloc[-1]/2, f'Impedance: {R_opt:.0f} $\Omega$',bbox=dict(facecolor='white', alpha=0.5))
+    ax.set_xlabel(r"$Z'  [\Omega]$")
+    ax.set_ylabel(r"$Z'' [\Omega]$")
     ax.legend(loc='upper center', bbox_to_anchor=(0.45, 1.15), ncol=5, frameon=False)  
 
     # Set axis limits with a slight buffer
